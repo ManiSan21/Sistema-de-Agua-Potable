@@ -50,8 +50,20 @@ Partial Class frmConsultaPagos
         Me.rbtIdPago = New System.Windows.Forms.RadioButton()
         Me.rbtTipoDePago = New System.Windows.Forms.RadioButton()
         Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.gbAgua = New System.Windows.Forms.GroupBox()
+        Me.txtTARConsulta = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtRecargoConsulta = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtCFConsulta = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtDescuentoConsulta = New System.Windows.Forms.TextBox()
+        Me.txtINFRAConsulta = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         CType(Me.dgvConsultaPago, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbCuenta.SuspendLayout()
+        Me.gbAgua.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmbConsultaTipoDePago
@@ -68,7 +80,7 @@ Partial Class frmConsultaPagos
         '
         Me.dgvConsultaPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaPago.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdPago, Me.clmIdCuenta, Me.clmFechaConsulta, Me.clmTipo, Me.clmOtros, Me.clmTotal})
-        Me.dgvConsultaPago.Location = New System.Drawing.Point(47, 241)
+        Me.dgvConsultaPago.Location = New System.Drawing.Point(52, 374)
         Me.dgvConsultaPago.Name = "dgvConsultaPago"
         Me.dgvConsultaPago.ReadOnly = True
         Me.dgvConsultaPago.Size = New System.Drawing.Size(644, 150)
@@ -112,7 +124,7 @@ Partial Class frmConsultaPagos
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(308, 397)
+        Me.btnSalir.Location = New System.Drawing.Point(332, 530)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 5
@@ -154,6 +166,7 @@ Partial Class frmConsultaPagos
         '
         'mskNombreCuenta
         '
+        Me.mskNombreCuenta.Enabled = False
         Me.mskNombreCuenta.Location = New System.Drawing.Point(97, 30)
         Me.mskNombreCuenta.Mask = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         Me.mskNombreCuenta.Name = "mskNombreCuenta"
@@ -315,11 +328,122 @@ Partial Class frmConsultaPagos
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = True
         '
+        'gbAgua
+        '
+        Me.gbAgua.Controls.Add(Me.txtDescuentoConsulta)
+        Me.gbAgua.Controls.Add(Me.txtINFRAConsulta)
+        Me.gbAgua.Controls.Add(Me.Label24)
+        Me.gbAgua.Controls.Add(Me.Label20)
+        Me.gbAgua.Controls.Add(Me.txtTARConsulta)
+        Me.gbAgua.Controls.Add(Me.Label21)
+        Me.gbAgua.Controls.Add(Me.txtRecargoConsulta)
+        Me.gbAgua.Controls.Add(Me.Label22)
+        Me.gbAgua.Controls.Add(Me.txtCFConsulta)
+        Me.gbAgua.Controls.Add(Me.Label23)
+        Me.gbAgua.Location = New System.Drawing.Point(16, 242)
+        Me.gbAgua.Name = "gbAgua"
+        Me.gbAgua.Size = New System.Drawing.Size(522, 100)
+        Me.gbAgua.TabIndex = 11
+        Me.gbAgua.TabStop = False
+        Me.gbAgua.Text = "Agua"
+        Me.gbAgua.Visible = False
+        '
+        'txtTARConsulta
+        '
+        Me.txtTARConsulta.Enabled = False
+        Me.txtTARConsulta.Location = New System.Drawing.Point(409, 14)
+        Me.txtTARConsulta.Name = "txtTARConsulta"
+        Me.txtTARConsulta.Size = New System.Drawing.Size(97, 20)
+        Me.txtTARConsulta.TabIndex = 34
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(351, 14)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(53, 24)
+        Me.Label21.TabIndex = 33
+        Me.Label21.Text = "TAR:"
+        '
+        'txtRecargoConsulta
+        '
+        Me.txtRecargoConsulta.Enabled = False
+        Me.txtRecargoConsulta.Location = New System.Drawing.Point(248, 16)
+        Me.txtRecargoConsulta.Name = "txtRecargoConsulta"
+        Me.txtRecargoConsulta.Size = New System.Drawing.Size(97, 20)
+        Me.txtRecargoConsulta.TabIndex = 32
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(155, 14)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(87, 24)
+        Me.Label22.TabIndex = 31
+        Me.Label22.Text = "Recargo:"
+        '
+        'txtCFConsulta
+        '
+        Me.txtCFConsulta.Enabled = False
+        Me.txtCFConsulta.Location = New System.Drawing.Point(52, 16)
+        Me.txtCFConsulta.Name = "txtCFConsulta"
+        Me.txtCFConsulta.Size = New System.Drawing.Size(97, 20)
+        Me.txtCFConsulta.TabIndex = 30
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(6, 16)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(40, 24)
+        Me.Label23.TabIndex = 29
+        Me.Label23.Text = "CF:"
+        '
+        'txtDescuentoConsulta
+        '
+        Me.txtDescuentoConsulta.Enabled = False
+        Me.txtDescuentoConsulta.Location = New System.Drawing.Point(317, 51)
+        Me.txtDescuentoConsulta.Name = "txtDescuentoConsulta"
+        Me.txtDescuentoConsulta.Size = New System.Drawing.Size(97, 20)
+        Me.txtDescuentoConsulta.TabIndex = 38
+        '
+        'txtINFRAConsulta
+        '
+        Me.txtINFRAConsulta.Enabled = False
+        Me.txtINFRAConsulta.Location = New System.Drawing.Point(89, 51)
+        Me.txtINFRAConsulta.Name = "txtINFRAConsulta"
+        Me.txtINFRAConsulta.Size = New System.Drawing.Size(97, 20)
+        Me.txtINFRAConsulta.TabIndex = 36
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(205, 49)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(106, 24)
+        Me.Label24.TabIndex = 37
+        Me.Label24.Text = "Descuento:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(12, 49)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(71, 24)
+        Me.Label20.TabIndex = 35
+        Me.Label20.Text = "INFRA:"
+        '
         'frmConsultaPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 427)
+        Me.ClientSize = New System.Drawing.Size(748, 565)
+        Me.Controls.Add(Me.gbAgua)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.rbtTipoDePago)
         Me.Controls.Add(Me.rbtIdPago)
@@ -334,6 +458,8 @@ Partial Class frmConsultaPagos
         CType(Me.dgvConsultaPago, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbCuenta.ResumeLayout(False)
         Me.gbCuenta.PerformLayout()
+        Me.gbAgua.ResumeLayout(False)
+        Me.gbAgua.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,4 +492,15 @@ Partial Class frmConsultaPagos
     Friend WithEvents rbtTipoDePago As RadioButton
     Friend WithEvents btnConsultar As Button
     Friend WithEvents mskNombreCuenta As MaskedTextBox
+    Friend WithEvents gbAgua As GroupBox
+    Friend WithEvents txtTARConsulta As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents txtRecargoConsulta As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents txtCFConsulta As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents txtDescuentoConsulta As TextBox
+    Friend WithEvents txtINFRAConsulta As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label20 As Label
 End Class

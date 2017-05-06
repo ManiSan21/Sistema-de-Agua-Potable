@@ -1,4 +1,6 @@
-﻿Public Class frmPrincipal
+﻿Imports System.Data.SqlClient
+Imports Microsoft.Reporting.WinForms
+Public Class frmPrincipal
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -81,5 +83,141 @@
 
     Private Sub RegistroDePagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDePagosToolStripMenuItem.Click
         frmPagos.ShowDialog()
+    End Sub
+
+    Private Sub tsmiReporteDeCuentas_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeCuentas.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTECUENTAS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report1.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDeCalles_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeCalles.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTECALLES", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report2.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDeMaterialesConExistencia_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeMaterialesConExistencia.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTEMATERIALESCONEXISTENCIA", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report3.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDeEmpleados_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeEmpleados.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTEEMPLEADOS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report4.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDeGastos_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeGastos.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTEGASTOS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report5.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDeTarifas_Click(sender As Object, e As EventArgs) Handles tsmiReporteDeTarifas.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTETARIFAS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report6.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiReporteDePozos_Click(sender As Object, e As EventArgs) Handles tsmiReporteDePozos.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTEPOZOS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report7.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub tsmiCuentasPorCalle_Click(sender As Object, e As EventArgs) Handles tsmiCuentasPorCalle.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTECUENTASPORCALLE", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report8.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
     End Sub
 End Class

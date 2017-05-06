@@ -5,7 +5,8 @@ Public Class frmConsultaPagos
     Dim lector As SqlDataReader
     Private Sub frmConsultaPagos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.Open()
-        comando.CommandText = "Select * From pago"
+        Dim agua As String = "AGUA"
+        comando.CommandText = "Select * From pago Where Tipo='" & "AGUA" & "'"
         lector = comando.ExecuteReader
         While lector.Read
             cmbIdPagoConsulta.Items.Add(lector(0))
@@ -16,9 +17,11 @@ Public Class frmConsultaPagos
     Private Sub rbtIdPago_CheckedChanged(sender As Object, e As EventArgs) Handles rbtIdPago.CheckedChanged
         If rbtIdPago.Checked Then
             gbCuenta.Visible = True
+            gbAgua.Visible = True
             cmbIdPagoConsulta.Visible = True
         Else
             gbCuenta.Visible = False
+            gbAgua.Visible = False
             cmbIdPagoConsulta.Visible = False
         End If
     End Sub
@@ -61,6 +64,17 @@ Public Class frmConsultaPagos
             mskNumeroInterior.Text = lector(4)
             mskUltimoPagoAño.Text = lector(5)
             mskUltimoPagoMes.Text = lector(6)
+            lector.Close()
+
+            r = "Select agua.Descuento, agua.Recargo, agua.CF, agua.TAR, agua.INFRA From agua Where IdPago=" & CInt(cmbIdPagoConsulta.Text) & ""
+            comando.CommandText = r
+            lector = comando.ExecuteReader
+            lector.Read()
+            txtCFConsulta.Text = lector(2)
+            txtRecargoConsulta.Text = lector(1)
+            txtTARConsulta.Text = lector(3)
+            txtINFRAConsulta.Text = lector(4)
+            txtDescuentoConsulta.Text = lector(0)
             lector.Close()
 
             r = "Select pago.IdPago, pago.IdCuenta, pago.Fecha, pago.Tipo, pago.Otros, pago.Total From pago Where IdPago=" & CInt(cmbIdPagoConsulta.Text) & ""

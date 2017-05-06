@@ -43,6 +43,14 @@ Public Class frmPagos
             cmbEmpleado.Items.Add(lector(1))
         End While
         lector.Close()
+
+        'Dim meses As String() = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"}
+        'For x = mesInicial To mesInicial
+        '    cmbMesInicial.Items.Add(meses(x))
+        'Next
+        'For x = mesInicial + 1 To 11
+        '    cmbMesFinal.Items.Add(meses(x))
+        'Next
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -124,7 +132,36 @@ Public Class frmPagos
         mskNumeroInterior.Text = lector(4)
         mskUltimoPagoAño.Text = Year(lector(6))
         mskUltimoPagoMes.Text = Month(lector(7))
+        mesInicial = Month(lector(7))
         lector.Close()
+        cmbMesInicial.Items.Clear()
+        cmbMesFinal.Items.Clear()
+        'Dim meses As String() = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"}
+        'If mesInicial = 12 And CInt(cmbAñoTarifa.Text) <> Year(System.DateTime.Today) Then
+        '    For x = mesInicial - 1 To mesInicial - 1
+        '        cmbMesInicial.Items.Add(meses(x))
+        '    Next
+        '    For x = mesInicial - 1 To 11
+        '        cmbMesFinal.Items.Add(meses(x))
+        '    Next
+        'ElseIf mesInicial = 12 And CInt(cmbAñoTarifa.Text) = Year(System.DateTime.Today) Then
+        '    mesInicial = 1
+        '    For x = mesInicial To mesInicial
+        '        cmbMesInicial.Items.Add(meses(x))
+        '    Next
+        '    For x = mesInicial To 11
+        '        cmbMesFinal.Items.Add(meses(x))
+        '    Next
+        'Else
+        '    For x = mesInicial To mesInicial
+        '        cmbMesInicial.Items.Add(meses(x))
+        '    Next
+        '    For x = mesInicial To 11
+        '        cmbMesFinal.Items.Add(meses(x))
+        '    Next
+        '    mesInicial += 1
+        'End If
+        'mesInicial += 1
     End Sub
 
     Private Sub cmbSituacion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSituacion.SelectedIndexChanged
@@ -149,6 +186,41 @@ Public Class frmPagos
         txtTAR.Text = lector(4)
         txtINFRA.Text = lector(5)
         lector.Close()
+
+        Dim meses As String() = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"}
+        If mesInicial = 12 And CInt(cmbAñoTarifa.Text) <> Year(System.DateTime.Today) Then
+            For x = mesInicial - 1 To mesInicial - 1
+                cmbMesInicial.Items.Add(meses(x))
+            Next
+            For x = mesInicial - 1 To 11
+                cmbMesFinal.Items.Add(meses(x))
+            Next
+        ElseIf mesInicial = 12 And CInt(cmbAñoTarifa.Text) = Year(System.DateTime.Today) Then
+            mesInicial = 0
+            For x = mesInicial To mesInicial
+                cmbMesInicial.Items.Add(meses(x))
+            Next
+            For x = mesInicial To 11
+                cmbMesFinal.Items.Add(meses(x))
+            Next
+            mesInicial += 1
+        ElseIf CInt(cmbAñoTarifa.Text) <> Year(System.DateTime.Today) Then
+            For x = mesInicial To mesInicial
+                cmbMesInicial.Items.Add(meses(x))
+            Next
+            For x = mesInicial To 11
+                cmbMesFinal.Items.Add(meses(x))
+            Next
+            mesInicial += 1
+        Else
+            For x = mesInicial To mesInicial
+                cmbMesInicial.Items.Add(meses(x))
+            Next
+            For x = mesInicial To 11
+                cmbMesFinal.Items.Add(meses(x))
+            Next
+            mesInicial += 1
+        End If
     End Sub
 
     Private Sub cmbServicio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbServicio.SelectedIndexChanged
@@ -163,39 +235,39 @@ Public Class frmPagos
     End Sub
 
     Private Sub cmbMesInicial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMesInicial.SelectedIndexChanged
-        'Dim mesIni As Integer
-        If cmbMesInicial.Text = "ENERO" Then
-            mesInicial = 1
-        ElseIf cmbMesInicial.Text = "FEBRERO" Then
-            mesInicial = 2
-        ElseIf cmbMesInicial.Text = "MARZO" Then
-            mesInicial = 3
-        ElseIf cmbMesInicial.Text = "ABRIL" Then
-            mesInicial = 4
-        ElseIf cmbMesInicial.Text = "MAYO" Then
-            mesInicial = 5
-        ElseIf cmbMesInicial.Text = "JUNIO" Then
-            mesInicial = 6
-        ElseIf cmbMesInicial.Text = "JULIO" Then
-            mesInicial = 7
-        ElseIf cmbMesInicial.Text = "AGOSTO" Then
-            mesInicial = 8
-        ElseIf cmbMesInicial.Text = "SEPTIEMBRE" Then
-            mesInicial = 9
-        ElseIf cmbMesInicial.Text = "OCTUBRE" Then
-            mesInicial = 10
-        ElseIf cmbMesInicial.Text = "NOVIEMBRE" Then
-            mesInicial = 11
-        ElseIf cmbMesInicial.Text = "DICIEMBRE" Then
-            mesInicial = 12
-        End If
+        'Dim meses As String() = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"}
+        'If cmbMesInicial.Text = "ENERO" Then
+        '    mesInicial = 1
+        'ElseIf cmbMesInicial.Text = "FEBRERO" Then
+        '    mesInicial = 2
+        'ElseIf cmbMesInicial.Text = "MARZO" Then
+        '    mesInicial = 3
+        'ElseIf cmbMesInicial.Text = "ABRIL" Then
+        '    mesInicial = 4
+        'ElseIf cmbMesInicial.Text = "MAYO" Then
+        '    mesInicial = 5
+        'ElseIf cmbMesInicial.Text = "JUNIO" Then
+        '    mesInicial = 6
+        'ElseIf cmbMesInicial.Text = "JULIO" Then
+        '    mesInicial = 7
+        'ElseIf cmbMesInicial.Text = "AGOSTO" Then
+        '    mesInicial = 8
+        'ElseIf cmbMesInicial.Text = "SEPTIEMBRE" Then
+        '    mesInicial = 9
+        'ElseIf cmbMesInicial.Text = "OCTUBRE" Then
+        '    mesInicial = 10
+        'ElseIf cmbMesInicial.Text = "NOVIEMBRE" Then
+        '    mesInicial = 11
+        'ElseIf cmbMesInicial.Text = "DICIEMBRE" Then
+        '    mesInicial = 12
+        'End If
+        'mesInicial = CInt(mskUltimoPagoMes.Text)
+
+
     End Sub
 
     Private Sub cmbMesFinal_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMesFinal.SelectedIndexChanged
-        Dim mesFin As Integer
-        Dim numMeses As Integer
         Dim fechaSistema As Date = System.DateTime.Now
-        Dim añoSistema As Integer
         If cmbMesFinal.Text = "ENERO" Then
             mesFinal = 1
         ElseIf cmbMesFinal.Text = "FEBRERO" Then
@@ -232,6 +304,12 @@ Public Class frmPagos
         Dim c5 As Double
         Dim otros As String
         Dim total As String
+        Dim cf As Double
+        Dim tar As Double
+        Dim infra As Double
+        Dim infraFin As String
+        Dim tarFin As String
+        Dim cfFin As String
         Dim rec As Double
         Dim des As Double
         Dim recargos As String
@@ -254,7 +332,13 @@ Public Class frmPagos
             c5 = CDbl(txtTotal.Text)
             rec = CDbl(txtRecargoFinal.Text)
             des = CDbl(txtDescuentoFinal.Text)
+            cf = CDbl(txtCFFinal.Text)
+            tar = CDbl(txtTARFinal.Text)
+            infra = CDbl(txtINFRAFinal.Text)
 
+            cfFin = Replace(cf, ",", ".")
+            tarFin = Replace(tar, ",", ".")
+            infraFin = Replace(infra, ",", ".")
             otros = Replace(c4, ",", ".")
             total = Replace(c5, ",", ".")
             recargos = Replace(rec, ",", ".")
@@ -264,7 +348,7 @@ Public Class frmPagos
             comando.CommandText = r
             comando.ExecuteNonQuery()
 
-            r = "Insert Into agua(IdPago, IdSituacion, IdTarifa, MInicial, MFinal, Descuento, Recargo) values(" & c0 & "," & CInt(mskIdSituacion.Text) & "," & CInt(cmbAñoTarifa.Text) & ",'" & cmbMesInicial.Text & "','" & cmbMesFinal.Text & "'," & descuentos & "," & recargos & ")"
+            r = "Insert Into agua(IdPago, IdSituacion, IdTarifa, MInicial, MFinal, Descuento, Recargo, CF, TAR, INFRA) values(" & c0 & "," & CInt(mskIdSituacion.Text) & "," & CInt(cmbAñoTarifa.Text) & ",'" & cmbMesInicial.Text & "','" & cmbMesFinal.Text & "'," & descuentos & "," & recargos & "," & cfFin & "," & tarFin & "," & infraFin & ")"
             comando.CommandText = r
             comando.ExecuteNonQuery()
 
@@ -273,12 +357,11 @@ Public Class frmPagos
                 comando.CommandText = r
                 comando.ExecuteNonQuery()
             Else
-                r = "Update cuentas Set UltimoPagoM='" & CDate(fechaFinal) & "' Where IdCuenta=" & c1 & ""
+                r = "Update cuentas Set UltimoPagoA='" & CDate(fechaAño) & "', UltimoPagoM='" & CDate(fechaFinal) & "' Where IdCuenta=" & c1 & ""
                 comando.CommandText = r
                 comando.ExecuteNonQuery()
             End If
         ElseIf rbtServicio.Checked Then
-            'r = "Select pago.IdPago, servicios.IdServicios, empleados.IdEmpleado, servicios.Precio From pago INNER JOIN "
             Dim idServicio As Integer = CInt(mskIdServicio.Text)
             Dim idPago As Integer = CInt(mskIdPago.Text)
             Dim idEmpleado As Integer = CInt(mskIdEmpleado.Text)
@@ -323,6 +406,15 @@ Public Class frmPagos
         txtTotal.Clear()
         mskIdServicio.Clear()
         txtPrecio.Clear()
+        cmbNombreCuenta.Text = ""
+        cmbSituacion.Text = ""
+        cmbAñoTarifa.Text = ""
+        cmbMesInicial.Text = ""
+        cmbMesFinal.Text = ""
+        cmbEmpleado.Text = ""
+        cmbServicio.Text = ""
+        cmbMesFinal.Items.Clear()
+        cmbMesInicial.Items.Clear()
         btnCalcular.Enabled = True
         btnGrabar.Enabled = False
         btnNuevo.Enabled = True
@@ -347,7 +439,9 @@ Public Class frmPagos
         For x = mesInicial To mesFinal
             numMeses += 1
         Next
-
+        MessageBox.Show(mesInicial)
+        MessageBox.Show(mesFinal)
+        MessageBox.Show(numMeses)
         comando.CommandText = "Select * From tarifas Where Año='" & cmbAñoTarifa.Text & "'"
         lector = comando.ExecuteReader
         lector.Read()
@@ -387,14 +481,16 @@ Public Class frmPagos
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        frmImprimirFactura.ShowDialog()
+
     End Sub
 
     Private Sub cmbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEmpleado.SelectedIndexChanged
-        comando.CommandText = "Select * From empleados Where Nombre='" & cmbEmpleado.Text & "'"
-        lector = comando.ExecuteReader
-        lector.Read()
-        mskIdEmpleado.Text = lector(0)
-        lector.Close()
+        If rbtServicio.Checked Then
+            comando.CommandText = "Select * From empleados Where Nombre='" & cmbEmpleado.Text & "'"
+            lector = comando.ExecuteReader
+            lector.Read()
+            mskIdEmpleado.Text = lector(0)
+            lector.Close()
+        End If
     End Sub
 End Class

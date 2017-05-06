@@ -76,6 +76,8 @@ Partial Class frmPagos
         Me.cmbSituacion = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.gbServicios = New System.Windows.Forms.GroupBox()
+        Me.mskIdEmpleado = New System.Windows.Forms.MaskedTextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.cmbEmpleado = New System.Windows.Forms.ComboBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
@@ -93,8 +95,7 @@ Partial Class frmPagos
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.btnCalcular = New System.Windows.Forms.Button()
-        Me.mskIdEmpleado = New System.Windows.Forms.MaskedTextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.gbCuenta.SuspendLayout()
         Me.gbTipoPago.SuspendLayout()
         Me.gbPagoAgua.SuspendLayout()
@@ -462,7 +463,6 @@ Partial Class frmPagos
         'cmbMesFinal
         '
         Me.cmbMesFinal.FormattingEnabled = True
-        Me.cmbMesFinal.Items.AddRange(New Object() {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"})
         Me.cmbMesFinal.Location = New System.Drawing.Point(340, 86)
         Me.cmbMesFinal.Name = "cmbMesFinal"
         Me.cmbMesFinal.Size = New System.Drawing.Size(121, 21)
@@ -481,7 +481,6 @@ Partial Class frmPagos
         'cmbMesInicial
         '
         Me.cmbMesInicial.FormattingEnabled = True
-        Me.cmbMesInicial.Items.AddRange(New Object() {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"})
         Me.cmbMesInicial.Location = New System.Drawing.Point(109, 89)
         Me.cmbMesInicial.Name = "cmbMesInicial"
         Me.cmbMesInicial.Size = New System.Drawing.Size(121, 21)
@@ -662,6 +661,25 @@ Partial Class frmPagos
         Me.gbServicios.Text = "Servicios"
         Me.gbServicios.Visible = False
         '
+        'mskIdEmpleado
+        '
+        Me.mskIdEmpleado.Enabled = False
+        Me.mskIdEmpleado.Location = New System.Drawing.Point(397, 20)
+        Me.mskIdEmpleado.Mask = "0000000000"
+        Me.mskIdEmpleado.Name = "mskIdEmpleado"
+        Me.mskIdEmpleado.Size = New System.Drawing.Size(68, 20)
+        Me.mskIdEmpleado.TabIndex = 24
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(266, 19)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(117, 24)
+        Me.Label31.TabIndex = 23
+        Me.Label31.Text = "IdEmpleado:"
+        '
         'Label30
         '
         Me.Label30.AutoSize = True
@@ -819,24 +837,10 @@ Partial Class frmPagos
         Me.btnCalcular.Text = "Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = True
         '
-        'mskIdEmpleado
+        'PrintDialog1
         '
-        Me.mskIdEmpleado.Enabled = False
-        Me.mskIdEmpleado.Location = New System.Drawing.Point(397, 20)
-        Me.mskIdEmpleado.Mask = "0000000000"
-        Me.mskIdEmpleado.Name = "mskIdEmpleado"
-        Me.mskIdEmpleado.Size = New System.Drawing.Size(68, 20)
-        Me.mskIdEmpleado.TabIndex = 24
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(266, 19)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(117, 24)
-        Me.Label31.TabIndex = 23
-        Me.Label31.Text = "IdEmpleado:"
+        Me.PrintDialog1.PrintToFile = True
+        Me.PrintDialog1.UseEXDialog = True
         '
         'frmPagos
         '
@@ -949,4 +953,5 @@ Partial Class frmPagos
     Friend WithEvents cmbEmpleado As ComboBox
     Friend WithEvents mskIdEmpleado As MaskedTextBox
     Friend WithEvents Label31 As Label
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class

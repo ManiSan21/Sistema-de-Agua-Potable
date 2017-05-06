@@ -191,7 +191,7 @@ Partial Class frmCuentas
         Me.dgCuentas.Location = New System.Drawing.Point(16, 321)
         Me.dgCuentas.Name = "dgCuentas"
         Me.dgCuentas.ReadOnly = True
-        Me.dgCuentas.Size = New System.Drawing.Size(669, 150)
+        Me.dgCuentas.Size = New System.Drawing.Size(847, 150)
         Me.dgCuentas.TabIndex = 25
         '
         'IdCuentaDataGridViewTextBoxColumn
@@ -289,7 +289,7 @@ Partial Class frmCuentas
         '
         'cmdSalir
         '
-        Me.cmdSalir.Location = New System.Drawing.Point(561, 499)
+        Me.cmdSalir.Location = New System.Drawing.Point(763, 499)
         Me.cmdSalir.Name = "cmdSalir"
         Me.cmdSalir.Size = New System.Drawing.Size(75, 23)
         Me.cmdSalir.TabIndex = 32
@@ -299,7 +299,7 @@ Partial Class frmCuentas
         'cmdGrabar
         '
         Me.cmdGrabar.Enabled = False
-        Me.cmdGrabar.Location = New System.Drawing.Point(292, 499)
+        Me.cmdGrabar.Location = New System.Drawing.Point(432, 499)
         Me.cmdGrabar.Name = "cmdGrabar"
         Me.cmdGrabar.Size = New System.Drawing.Size(75, 23)
         Me.cmdGrabar.TabIndex = 31
@@ -380,7 +380,7 @@ Partial Class frmCuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(713, 534)
+        Me.ClientSize = New System.Drawing.Size(881, 534)
         Me.Controls.Add(Me.dtpUltimoPagoM)
         Me.Controls.Add(Me.dtpUltimoPagoA)
         Me.Controls.Add(Me.dtpFechaAlta)

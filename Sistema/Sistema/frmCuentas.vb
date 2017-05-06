@@ -1,12 +1,5 @@
 ﻿Public Class frmCuentas
     Private Sub frmCuentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'DataSetSistema.cuentas' Puede moverla o quitarla según sea necesario.
-        'Me.CuentasTableAdapter.Fill(Me.DataSetSistema.cuentas)
-        'TODO: esta línea de código carga datos en la tabla 'DataSetSistema.cuentas' Puede moverla o quitarla según sea necesario.
-        'Me.CuentasTableAdapter.Fill(Me.DataSetSistema.cuentas)
-        'TODO: esta línea de código carga datos en la tabla 'DataSetSistema.cuentas' Puede moverla o quitarla según sea necesario.
-        'Me.CuentasTableAdapter.Fill(Me.DataSetSistema.cuentas)
-        'TODO: esta línea de código carga datos en la tabla 'DataSetSistema.calles' Puede moverla o quitarla según sea necesario.
         Me.CallesTableAdapter.Fill(Me.DataSetSistema.calles)
         'TODO: esta línea de código carga datos en la tabla 'DataSetSistema.cuentas' Puede moverla o quitarla según sea necesario.
         Me.CuentasTableAdapter.Fill(Me.DataSetSistema.cuentas)
