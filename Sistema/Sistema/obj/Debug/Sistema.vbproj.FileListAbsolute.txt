@@ -44,3 +44,4 @@ C:\Visual Studio 2015\Sistema2\Sistema\Sistema\bin\Debug\zh-Hant\Microsoft.SqlSe
 C:\Visual Studio 2015\Sistema2\Sistema\Sistema\obj\Debug\Sistema.frmReportes.resources
 C:\Visual Studio 2015\Sistema2\Sistema\Sistema\obj\Debug\RdlCompile.cache
 C:\Visual Studio 2015\Sistema2\Sistema\Sistema\obj\Debug\RdlCompile.compiled
+C:\Visual Studio 2015\Sistema2\Sistema\Sistema\obj\Debug\Sistema.frmReportesFechas.resources

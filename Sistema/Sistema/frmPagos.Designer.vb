@@ -653,7 +653,7 @@ Partial Class frmPagos
         Me.gbServicios.Controls.Add(Me.Label26)
         Me.gbServicios.Controls.Add(Me.Label25)
         Me.gbServicios.Controls.Add(Me.cmbServicio)
-        Me.gbServicios.Location = New System.Drawing.Point(155, 163)
+        Me.gbServicios.Location = New System.Drawing.Point(181, 160)
         Me.gbServicios.Name = "gbServicios"
         Me.gbServicios.Size = New System.Drawing.Size(477, 125)
         Me.gbServicios.TabIndex = 33

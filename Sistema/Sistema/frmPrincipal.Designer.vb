@@ -58,6 +58,15 @@ Partial Class frmPrincipal
         Me.tsmiReporteDeGastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiReporteDeTarifas = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiReporteDePozos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeClientesMorososToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistorialDePagosPorCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListadoDeServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RelaciónDeGastosEnUnPeriodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RelaciónDePagosEnUnPeriodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -235,7 +244,7 @@ Partial Class frmPrincipal
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiReporteDeCuentas, Me.tsmiCuentasPorCalle, Me.tsmiReporteDeCalles, Me.tsmiReporteDeMaterialesConExistencia, Me.tsmiReporteDeEmpleados, Me.tsmiReporteDeGastos, Me.tsmiReporteDeTarifas, Me.tsmiReporteDePozos})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiReporteDeCuentas, Me.tsmiCuentasPorCalle, Me.tsmiReporteDeCalles, Me.tsmiReporteDeMaterialesConExistencia, Me.tsmiReporteDeEmpleados, Me.tsmiReporteDeGastos, Me.tsmiReporteDeTarifas, Me.tsmiReporteDePozos, Me.ReporteDeProveedoresToolStripMenuItem, Me.ReporteDeClientesMorososToolStripMenuItem, Me.HistorialDePagosPorCuentaToolStripMenuItem, Me.ListadoDeServiciosToolStripMenuItem, Me.ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem, Me.ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem, Me.RelaciónDeGastosEnUnPeriodoToolStripMenuItem, Me.RelaciónDePagosEnUnPeriodoToolStripMenuItem, Me.RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -243,50 +252,104 @@ Partial Class frmPrincipal
         'tsmiReporteDeCuentas
         '
         Me.tsmiReporteDeCuentas.Name = "tsmiReporteDeCuentas"
-        Me.tsmiReporteDeCuentas.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeCuentas.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeCuentas.Text = "Reporte de cuentas"
         '
         'tsmiCuentasPorCalle
         '
         Me.tsmiCuentasPorCalle.Name = "tsmiCuentasPorCalle"
-        Me.tsmiCuentasPorCalle.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiCuentasPorCalle.Size = New System.Drawing.Size(317, 22)
         Me.tsmiCuentasPorCalle.Text = "Reporte de cuentas por calle"
         '
         'tsmiReporteDeCalles
         '
         Me.tsmiReporteDeCalles.Name = "tsmiReporteDeCalles"
-        Me.tsmiReporteDeCalles.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeCalles.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeCalles.Text = "Reporte de calles"
         '
         'tsmiReporteDeMaterialesConExistencia
         '
         Me.tsmiReporteDeMaterialesConExistencia.Name = "tsmiReporteDeMaterialesConExistencia"
-        Me.tsmiReporteDeMaterialesConExistencia.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeMaterialesConExistencia.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeMaterialesConExistencia.Text = "Reporte de materiales con existencia"
         '
         'tsmiReporteDeEmpleados
         '
         Me.tsmiReporteDeEmpleados.Name = "tsmiReporteDeEmpleados"
-        Me.tsmiReporteDeEmpleados.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeEmpleados.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeEmpleados.Text = "Reporte de Empleados"
         '
         'tsmiReporteDeGastos
         '
         Me.tsmiReporteDeGastos.Name = "tsmiReporteDeGastos"
-        Me.tsmiReporteDeGastos.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeGastos.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeGastos.Text = "Reporte de Gastos"
         '
         'tsmiReporteDeTarifas
         '
         Me.tsmiReporteDeTarifas.Name = "tsmiReporteDeTarifas"
-        Me.tsmiReporteDeTarifas.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDeTarifas.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDeTarifas.Text = "Reporte de Tarifas"
         '
         'tsmiReporteDePozos
         '
         Me.tsmiReporteDePozos.Name = "tsmiReporteDePozos"
-        Me.tsmiReporteDePozos.Size = New System.Drawing.Size(265, 22)
+        Me.tsmiReporteDePozos.Size = New System.Drawing.Size(317, 22)
         Me.tsmiReporteDePozos.Text = "Reporte de pozos"
+        '
+        'ReporteDeProveedoresToolStripMenuItem
+        '
+        Me.ReporteDeProveedoresToolStripMenuItem.Name = "ReporteDeProveedoresToolStripMenuItem"
+        Me.ReporteDeProveedoresToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.ReporteDeProveedoresToolStripMenuItem.Text = "Reporte de proveedores"
+        '
+        'ReporteDeClientesMorososToolStripMenuItem
+        '
+        Me.ReporteDeClientesMorososToolStripMenuItem.Name = "ReporteDeClientesMorososToolStripMenuItem"
+        Me.ReporteDeClientesMorososToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.ReporteDeClientesMorososToolStripMenuItem.Text = "Reporte de clientes morosos"
+        '
+        'HistorialDePagosPorCuentaToolStripMenuItem
+        '
+        Me.HistorialDePagosPorCuentaToolStripMenuItem.Name = "HistorialDePagosPorCuentaToolStripMenuItem"
+        Me.HistorialDePagosPorCuentaToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.HistorialDePagosPorCuentaToolStripMenuItem.Text = "Historial de pagos por cliente"
+        '
+        'ListadoDeServiciosToolStripMenuItem
+        '
+        Me.ListadoDeServiciosToolStripMenuItem.Name = "ListadoDeServiciosToolStripMenuItem"
+        Me.ListadoDeServiciosToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.ListadoDeServiciosToolStripMenuItem.Text = "Listado de servicios"
+        '
+        'ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem
+        '
+        Me.ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem.Name = "ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem"
+        Me.ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem.Text = "Relación de entrada de material en un periodo"
+        '
+        'ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem
+        '
+        Me.ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem.Name = "ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem"
+        Me.ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem.Text = "Relación de salidas de material en un periodo"
+        '
+        'RelaciónDeGastosEnUnPeriodoToolStripMenuItem
+        '
+        Me.RelaciónDeGastosEnUnPeriodoToolStripMenuItem.Name = "RelaciónDeGastosEnUnPeriodoToolStripMenuItem"
+        Me.RelaciónDeGastosEnUnPeriodoToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.RelaciónDeGastosEnUnPeriodoToolStripMenuItem.Text = "Relación de gastos en un periodo"
+        '
+        'RelaciónDePagosEnUnPeriodoToolStripMenuItem
+        '
+        Me.RelaciónDePagosEnUnPeriodoToolStripMenuItem.Name = "RelaciónDePagosEnUnPeriodoToolStripMenuItem"
+        Me.RelaciónDePagosEnUnPeriodoToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.RelaciónDePagosEnUnPeriodoToolStripMenuItem.Text = "Relación de pagos en un periodo"
+        '
+        'RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem
+        '
+        Me.RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem.Name = "RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem"
+        Me.RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem.Size = New System.Drawing.Size(317, 22)
+        Me.RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem.Text = "Relación de actividad de pozos en un periodo"
         '
         'frmPrincipal
         '
@@ -340,4 +403,13 @@ Partial Class frmPrincipal
     Friend WithEvents tsmiReporteDeGastos As ToolStripMenuItem
     Friend WithEvents tsmiReporteDeTarifas As ToolStripMenuItem
     Friend WithEvents tsmiReporteDePozos As ToolStripMenuItem
+    Friend WithEvents ReporteDeProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeClientesMorososToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistorialDePagosPorCuentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListadoDeServiciosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RelaciónDeGastosEnUnPeriodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RelaciónDePagosEnUnPeriodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem As ToolStripMenuItem
 End Class

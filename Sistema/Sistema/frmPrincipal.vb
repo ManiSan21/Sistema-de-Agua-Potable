@@ -220,4 +220,73 @@ Public Class frmPrincipal
         frmReportes.ShowDialog()
         conexion.Close()
     End Sub
+
+    Private Sub ReporteDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeProveedoresToolStripMenuItem.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTEPROVEEDORES", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report9.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub ListadoDeServiciosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeServiciosToolStripMenuItem.Click
+        banServAt = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeEntradaDeMaterialEnUnPeriodoToolStripMenuItem.Click
+        banEntradaMat = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeSalidasDeMaterialEnUnPeriodoToolStripMenuItem.Click
+        banSalidaMat = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub HistorialDePagosPorCuentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDePagosPorCuentaToolStripMenuItem.Click
+        banHistPagos = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub ReporteDeClientesMorososToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeClientesMorososToolStripMenuItem.Click
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-B3IP6AD\MANI; Initial Catalog='SistemaAguaPotable'; Integrated Security=true")
+        Dim cmd As New SqlCommand("REPORTECLIENTESMOROSOS", conexion)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim adaptador As New SqlDataAdapter(cmd)
+        Dim data As New DataSet
+        adaptador.Fill(data)
+        data.DataSetName = "DataSet1"
+        Dim reportes As New ReportDataSource("DataSet1", data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Visual Studio 2015\Sistema2\Sistema\Sistema\Report14.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        frmReportes.ShowDialog()
+        conexion.Close()
+    End Sub
+
+    Private Sub RelaciónDeGastosEnUnPeriodoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelaciónDeGastosEnUnPeriodoToolStripMenuItem.Click
+        banGastos = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub RelaciónDePagosEnUnPeriodoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelaciónDePagosEnUnPeriodoToolStripMenuItem.Click
+        banPagos = True
+        frmReportesFechas.ShowDialog()
+    End Sub
+
+    Private Sub RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelaciónDeActividadDePozosEnUnPeriodoToolStripMenuItem.Click
+        banActPozos = True
+        frmReportesFechas.ShowDialog()
+    End Sub
 End Class

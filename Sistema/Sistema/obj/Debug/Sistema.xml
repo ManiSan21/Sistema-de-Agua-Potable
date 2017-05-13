@@ -122,6 +122,56 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Sistema.DataSetSistema.REPORTEPROVEEDORESDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEHISTORIALPAGOSCLIENTEDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTECLIENTESMOROSOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEGASTOSPERIODOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEPAGOSPERIODODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEACTIVIDADPOZOSPERIODODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEENTRADAMATERIALPERIODODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESALIDAMATERIALPERIODODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSPERIODODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Sistema.DataSetSistema.gastosRow">
 <summary>
 Represents strongly named DataRow class.
@@ -213,6 +263,56 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Sistema.DataSetSistema.REPORTECUENTASPORCALLERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEPROVEEDORESRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEHISTORIALPAGOSCLIENTERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTECLIENTESMOROSOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEGASTOSPERIODOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEPAGOSPERIODORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEACTIVIDADPOZOSPERIODORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEENTRADAMATERIALPERIODORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESALIDAMATERIALPERIODORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSPERIODORow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -312,6 +412,56 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Sistema.DataSetSistema.REPORTEPROVEEDORESRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEHISTORIALPAGOSCLIENTERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTECLIENTESMOROSOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEGASTOSPERIODOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEPAGOSPERIODORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEACTIVIDADPOZOSPERIODORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTEENTRADAMATERIALPERIODORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESALIDAMATERIALPERIODORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistema.REPORTESERVICIOSPERIODORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Sistema.DataSetSistemaTableAdapters.gastosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -403,6 +553,56 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Sistema.DataSetSistemaTableAdapters.REPORTECUENTASPORCALLETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEPROVEEDORESTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTESERVICIOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEHISTORIALPAGOSCLIENTETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTECLIENTESMOROSOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEGASTOSPERIODOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEPAGOSPERIODOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEACTIVIDADPOZOSPERIODOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTEENTRADAMATERIALPERIODOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTESALIDAMATERIALPERIODOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Sistema.DataSetSistemaTableAdapters.REPORTESERVICIOSPERIODOTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

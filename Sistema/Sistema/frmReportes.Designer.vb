@@ -29,14 +29,14 @@ Partial Class frmReportes
         '
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(889, 490)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1232, 490)
         Me.ReportViewer1.TabIndex = 0
         '
         'frmReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(913, 514)
+        Me.ClientSize = New System.Drawing.Size(1256, 514)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "frmReportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
