@@ -58,4 +58,58 @@
         TarifasTableAdapter.Update(DataSetSistema.tarifas)
         Me.Close()
     End Sub
+
+    Private Sub txtAño_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAño.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtCF_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCF.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtIdTarifas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIdTarifas.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtINFRA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtINFRA.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtRecargos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRecargos.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtTAR_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTAR.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
 End Class

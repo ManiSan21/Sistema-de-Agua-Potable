@@ -49,7 +49,6 @@ Partial Class frmProveedores
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.dgProveedores = New System.Windows.Forms.DataGridView()
-        Me.ProveedorTableAdapter = New Sistema.DataSetSistemaTableAdapters.proveedorTableAdapter()
         Me.IdProveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,6 +57,7 @@ Partial Class frmProveedores
         Me.CPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProveedorTableAdapter = New Sistema.DataSetSistemaTableAdapters.proveedorTableAdapter()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetSistema, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -302,12 +302,8 @@ Partial Class frmProveedores
         Me.dgProveedores.Location = New System.Drawing.Point(17, 265)
         Me.dgProveedores.Name = "dgProveedores"
         Me.dgProveedores.ReadOnly = True
-        Me.dgProveedores.Size = New System.Drawing.Size(699, 150)
+        Me.dgProveedores.Size = New System.Drawing.Size(944, 150)
         Me.dgProveedores.TabIndex = 37
-        '
-        'ProveedorTableAdapter
-        '
-        Me.ProveedorTableAdapter.ClearBeforeFill = True
         '
         'IdProveedorDataGridViewTextBoxColumn
         '
@@ -366,11 +362,15 @@ Partial Class frmProveedores
         Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
         Me.EmailDataGridViewTextBoxColumn.Width = 200
         '
+        'ProveedorTableAdapter
+        '
+        Me.ProveedorTableAdapter.ClearBeforeFill = True
+        '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(728, 472)
+        Me.ClientSize = New System.Drawing.Size(976, 472)
         Me.Controls.Add(Me.dgProveedores)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtTelefono)

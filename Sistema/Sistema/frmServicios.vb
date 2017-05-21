@@ -40,9 +40,6 @@
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
         txtDescripcion.Enabled = False
         txtPrecio.Enabled = False
-        'ServiciosBindingSource.Current(0) = txtIdServicio.Text
-        'ServiciosBindingSource.Current(1) = txtDescripcion.Text
-        'ServiciosBindingSource.Current(2) = txtPrecio.Text
         asignar()
         dgServicios.Refresh()
         cmdGrabar.Enabled = False
@@ -63,5 +60,32 @@
         ServiciosBindingSource.Current(0) = txtIdServicio.Text
         ServiciosBindingSource.Current(1) = txtDescripcion.Text
         ServiciosBindingSource.Current(2) = txtPrecio.Text
+    End Sub
+
+    Private Sub txtDescripcion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescripcion.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(cadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtIdServicio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIdServicio.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(numerosValidos, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
     End Sub
 End Class

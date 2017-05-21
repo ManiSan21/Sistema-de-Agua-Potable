@@ -798,7 +798,6 @@ Partial Class frmPagos
         Me.txtOtros.Name = "txtOtros"
         Me.txtOtros.Size = New System.Drawing.Size(97, 20)
         Me.txtOtros.TabIndex = 28
-        Me.txtOtros.Text = "0"
         '
         'Label28
         '
